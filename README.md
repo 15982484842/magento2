@@ -84,3 +84,10 @@ Use the following table to verify you have the correct prerequisites to install 
   find /var/www/magento2 -type d -print0 | xargs -r0 chmod 750
   chmod -R g+w /var/www/magento2/{pub,var}
 </pre>
+
+<h3>default admin credentials </h3>
+
+<pre>
+username : admin 
+password : admin@123!
+</pre>
