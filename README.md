@@ -38,18 +38,18 @@ Use the following table to verify you have the correct prerequisites to install 
 </code>
 
 <h2>Step 3: Create and Import Database</h2>
-<code>
+<pre>
   *# untar mageto2.sql.tar.gz file
   tar -xzf mageto2.sql.tar.gz
   *# now create database using terminal or phpMyAdmin and import mageto2.sql file
   *# change URL in core_config_data table chage URL  for key web/unsecure/base_url &  web/secure/base_url
-</code>
+</pre>
 
 <h2>Step 4: Set DB Credentials</h2>
 <ul>
 <li>
   remame app/etc/env.php.sample to app/etc/env.php and set database credentials
-  <code>
+  <pre>
     'db' => 
   array (
     'table_prefix' => '',
@@ -64,22 +64,23 @@ Use the following table to verify you have the correct prerequisites to install 
         'active' => '1',
       ),
     ),
-  </code>
+  </pre>
   if you want to change admin path 
   than change here 
-  <code>
+  <pre>
       'backend' => 
         array (
           'frontName' => 'admin',
         ),
-  </code>
+  </pre>
   
 </li>
+</ul>
 
 <h2>Step 4: Set Permission and run website</h2>
-<code>
+<pre>
   chown -R admin:www-data /var/www/magento2
   find /var/www/magento2 -type f -print0 | xargs -r0 chmod 640
   find /var/www/magento2 -type d -print0 | xargs -r0 chmod 750
   chmod -R g+w /var/www/magento2/{pub,var}
-</code>
+</pre>
